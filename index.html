@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joel Gajda — Aerosol Artist</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Joel Gajda is an aerosol artist creating large-scale murals and graffiti art. Browse the full gallery of works.">
+  <meta name="keywords" content="Joel Gajda, aerosol artist, graffiti, mural, street art, spray paint, Australia">
+  <meta name="author" content="Joel Gajda">
+  <link rel="canonical" href="https://joelgajda.com/">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://joelgajda.com/">
+  <meta property="og:site_name" content="Joel Gajda">
+  <meta property="og:title" content="Joel Gajda — Aerosol Artist">
+  <meta property="og:description" content="Joel Gajda is an aerosol artist creating large-scale murals and graffiti art. Browse the full gallery of works.">
+  <meta property="og:image" content="https://joelgajda.com/images/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Joel Gajda — Aerosol Artist">
+  <meta name="twitter:description" content="Joel Gajda is an aerosol artist creating large-scale murals and graffiti art. Browse the full gallery of works.">
+  <meta name="twitter:image" content="https://joelgajda.com/images/og.jpg">
+  <script>window.MANIFEST=[{"file":"1.webp","sm":"1_sm.webp","smw":640,"w":1280,"h":788},{"file":"2.webp","sm":"2_sm.webp","smw":640,"w":1280,"h":1008},{"file":"3.webp","sm":"3_sm.webp","smw":640,"w":1280,"h":889},{"file":"4.webp","sm":"4_sm.webp","smw":504,"w":756,"h":960},{"file":"5.webp","sm":"5_sm.webp","smw":537,"w":828,"h":986},{"file":"6.webp","sm":"6_sm.webp","smw":640,"w":1280,"h":1195},{"file":"7.webp","sm":"7_sm.webp","smw":640,"w":1201,"h":590},{"file":"8.webp","sm":"8_sm.webp","smw":640,"w":1280,"h":711},{"file":"9.webp","sm":"9_sm.webp","smw":640,"w":1280,"h":912},{"file":"10.webp","sm":"10_sm.webp","smw":640,"w":1280,"h":606},{"file":"11.webp","sm":"11_sm.webp","smw":480,"w":960,"h":1280},{"file":"12.webp","sm":"12_sm.webp","smw":480,"w":960,"h":1280},{"file":"13.webp","sm":"13_sm.webp","smw":480,"w":960,"h":1280},{"file":"14.webp","sm":"14_sm.webp","smw":640,"w":1280,"h":960},{"file":"15.webp","sm":"15_sm.webp","smw":374,"w":748,"h":1280},{"file":"16.webp","sm":"16_sm.webp","smw":640,"w":1190,"h":540},{"file":"17.webp","sm":"17_sm.webp","smw":480,"w":960,"h":1280},{"file":"18.webp","sm":"18_sm.webp","smw":428,"w":857,"h":1280},{"file":"19.webp","sm":"19_sm.webp","smw":640,"w":1280,"h":739},{"file":"20.webp","sm":"20_sm.webp","smw":640,"w":1280,"h":853},{"file":"21.webp","sm":"21_sm.webp","smw":429,"w":858,"h":1280},{"file":"22.webp","sm":"22_sm.webp","smw":640,"w":1192,"h":565},{"file":"23.webp","sm":"23_sm.webp","smw":640,"w":1170,"h":600},{"file":"24.webp","sm":"24_sm.webp","smw":401,"w":802,"h":1280},{"file":"25.webp","sm":"25_sm.webp","smw":506,"w":1011,"h":1280},{"file":"26.webp","sm":"26_sm.webp","smw":480,"w":960,"h":1280},{"file":"27.webp","sm":"27_sm.webp","smw":640,"w":1280,"h":670},{"file":"28.webp","sm":"28_sm.webp","smw":640,"w":960,"h":720},{"file":"29.webp","sm":"29_sm.webp","smw":510,"w":1021,"h":1280},{"file":"30.webp","sm":"30_sm.webp","smw":640,"w":1280,"h":960},{"file":"31.webp","sm":"31_sm.webp","smw":640,"w":1280,"h":960},{"file":"32.webp","sm":"32_sm.webp","smw":480,"w":960,"h":1280},{"file":"33.webp","sm":"33_sm.webp","smw":480,"w":720,"h":960},{"file":"34.webp","sm":"34_sm.webp","smw":489,"w":828,"h":1083},{"file":"35.webp","sm":"35_sm.webp","smw":480,"w":960,"h":1280},{"file":"36.webp","sm":"36_sm.webp","smw":480,"w":960,"h":1280},{"file":"37.webp","sm":"37_sm.webp","smw":480,"w":960,"h":1280},{"file":"38.webp","sm":"38_sm.webp","smw":640,"w":1080,"h":1006},{"file":"39.webp","sm":"39_sm.webp","smw":480,"w":960,"h":1280},{"file":"40.webp","sm":"40_sm.webp","smw":640,"w":1280,"h":1138}];</script>
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { width: 100%; background: #000; overflow-x: hidden; }
+    #grid { position: relative; width: 100%; }
+    .tile { position: absolute; overflow: hidden; }
+    .tile img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .tile img.loaded { opacity: 1; }
+
+    #header {
+      position: fixed;
+      top: 8px; left: 8px; right: 8px; width: auto;
+      z-index: 100;
+      padding: 1rem 2.3rem;
+      border-radius: 1.2rem;
+      background: rgba(0,0,0,0.66);
+      color: #fff;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      pointer-events: none;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+    #header h1 { font-size: 1.7rem; font-weight: 600; letter-spacing: 0.02em; }
+    #header-right { display: flex; flex-direction: column; align-items: flex-end; gap: 8px; }
+    #header-right p { font-style: italic }
+    #header-right p, #header-right span, #header nav a { color: #fff; font-size: 1rem; letter-spacing: 0.04em; }
+    #header-right span { opacity: 0.7; }
+    #header nav { display: flex; gap: 14px; pointer-events: all; }
+    #header nav a { text-decoration: none; }
+    #header nav a:hover { text-decoration: underline; }
+    @media (max-width: 560px) {
+      #header-right p { display: none; }
+      #header { flex-direction: column; align-items: flex-start; gap: 2px; padding: .65rem 1.1rem; }
+      #header-right { align-items: flex-start; gap: 0; }
+      #header-right span, #header nav a { font-size: .78rem; }
+      #header nav { gap: 10px; }
+    }
+  </style>
+</head>
+<body>
+  <header id="header">
+    <h1>Joel Gajda</h1>
+    <div id="header-right">
+      <p>Aerosol Artist</p>
+      <nav>
+        <span>Contact:</span>
+        <a href="https://www.facebook.com/JoelGajda/" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.instagram.com/joel.gajda/" target="_blank" rel="noopener">Instagram</a>
+        <a href="mailto:joelgajda@hotmail.com">Email</a>
+      </nav>
+    </div>
+  </header>
+
+  <div id="grid"></div>
+
+  <script>
+    const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    if (tz === 'Australia/Hobart' || tz === 'Australia/Melbourne') {
+      document.querySelector('#header-right p').textContent = 'Tasmanian Aerosol Artist';
+    }
+  </script>
+
+  <script>
+    {
+      const vw     = window.innerWidth;
+      const COLS   = vw < 560 ? 2 : vw < 900 ? 3 : 4;
+      const COL_PC = 100 / COLS;
+      const COL_PX = vw / COLS;
+      const EAGER  = COLS;        // first row only: high-priority, no lazy
+      const BATCH  = COLS * 4;
+
+      const grid    = document.getElementById('grid');
+      const colTops = new Array(COLS).fill(0);
+      let shuffled = [], cursor = 0, busy = false;
+
+      function shuffle(arr) {
+        const a = arr.slice();
+        for (let i = a.length - 1; i > 0; i--) {
+          const j = (Math.random() * (i + 1)) | 0;
+          [a[i], a[j]] = [a[j], a[i]];
+        }
+        return a;
+      }
+
+      function shortestCol() {
+        let min = colTops[0], idx = 0;
+        for (let i = 1; i < COLS; i++) if (colTops[i] < min) { min = colTops[i]; idx = i; }
+        return idx;
+      }
+
+      const lazyObs = new IntersectionObserver((entries) => {
+        for (const e of entries) {
+          if (!e.isIntersecting) continue;
+          const img = e.target;
+          if (img.dataset.srcset) {
+            img.sizes  = img.dataset.sizes;
+            img.srcset = img.dataset.srcset;
+            delete img.dataset.srcset;
+            delete img.dataset.sizes;
+          }
+          lazyObs.unobserve(img);
+        }
+      }, { rootMargin: '300px 0px' });
+
+      // Unload images that scroll more than ~2000px off screen
+      const unloadObs = new IntersectionObserver((entries) => {
+        for (const e of entries) {
+          if (e.isIntersecting) continue;
+          const img = e.target;
+          if (!img.classList.contains('loaded')) continue;
+          img.dataset.srcset = img.srcset;
+          img.dataset.sizes  = img.sizes;
+          img.removeAttribute('srcset');
+          img.removeAttribute('src');
+          img.classList.remove('loaded');
+          lazyObs.observe(img);
+        }
+      }, { rootMargin: '2000px 0px' });
+
+      function placeTile(item, eager) {
+        const col = shortestCol();
+        const hPx = COL_PX * (item.h / item.w);
+
+        const tile = document.createElement('div');
+        tile.className = 'tile';
+        tile.style.cssText = `left:${col*COL_PC}%;top:${colTops[col]}px;width:${COL_PC}%;height:${hPx}px`;
+
+        const img = document.createElement('img');
+        img.alt      = `Joel Gajda artwork ${cursor + 1}`;
+        img.decoding = 'async';
+        img.onload = img.onerror = () => img.classList.add('loaded');
+
+        const srcset = `images/${item.sm} ${item.smw}w, images/${item.file} ${item.w}w`;
+        const sizes  = '(max-width: 559px) 50vw, (max-width: 899px) 33vw, 25vw';
+        if (eager) {
+          img.sizes         = sizes;
+          img.srcset        = srcset;
+          img.fetchPriority = 'high';
+        } else {
+          img.dataset.srcset = srcset;
+          img.dataset.sizes  = sizes;
+        }
+
+        tile.appendChild(img);
+        grid.appendChild(tile);
+
+        if (!eager) lazyObs.observe(img);
+        unloadObs.observe(img);
+        colTops[col] += hPx;
+        grid.style.height = Math.max(...colTops) + 'px';
+      }
+
+      function addBatch(count) {
+        if (busy || !shuffled.length) return;
+        busy = true;
+        const n = count || BATCH;
+        for (let i = 0; i < n; i++) {
+          placeTile(shuffled[cursor % shuffled.length], cursor < EAGER);
+          cursor++;
+        }
+        busy = false;
+      }
+
+      function fillIfNeeded() {
+        const dist = parseFloat(grid.style.height || 0) - (window.scrollY + window.innerHeight);
+        if (dist < window.innerHeight * 1.5) addBatch();
+      }
+
+      window.addEventListener('scroll', fillIfNeeded, { passive: true });
+
+      shuffled = shuffle(window.MANIFEST);
+      // Keep adding batches until grid extends 1.5× viewport (handles small screens)
+      let safety = 20;
+      while (safety-- > 0) {
+        const dist = parseFloat(grid.style.height || 0) - window.innerHeight;
+        if (dist >= window.innerHeight * 1.5) break;
+        addBatch();
+      }
+    }
+  </script>
+</body>
+</html>
